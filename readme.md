@@ -459,7 +459,8 @@ this.configs={
 5. 如果有压缩了的文件加入，最后需要在`webpack.config.js`中的`HtmlWebpackPlugin`手动进行加入！！！
 6. 项目对Jquery有依赖，添加方式为在`webpack.config.js`中的`HtmlWebpackPlugin`手动进行加入！！！
 7. 路由配置需要一个默认路由，默认路由有且只有一个，你可以看源码的login的路由配置，此处不作叙述
-8. 界面丑是因为我懒啦
+8. 如果使用非Angular原生的$http服务进行网络请求，请求完后如果要更新界面需要手动的进行刷新，代码为`$scope.$apply();`
+9. 界面丑是因为我懒啦
 
 # 编译
 如果你是**Windows**用户你可以执行
