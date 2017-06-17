@@ -30,7 +30,6 @@ class XsPermissionDirective extends Directive {
                     permissionName = permissionName.slice(1).trim();
                 }
                 function setVisibility() {
-                    console.log(xsPermission.permissions);
                     let hasPermission = xsPermission.hasPermission(permissionName);
                     if (hasPermission && !notPermission || !hasPermission && notPermission) {
                         $element.show();
