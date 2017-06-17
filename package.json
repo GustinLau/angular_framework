@@ -1,0 +1,48 @@
+{
+  "name": "angular_framework",
+  "version": "1.0.0",
+  "description": "angular_framework",
+  "author": "GustinLau <gustinlau@gmail.com>",
+  "main": "index.js",
+  "scripts": {
+    "start": "set BUILD_PATH=build && set IS_DEV=true && webpack-dev-server --host 0.0.0.0 --color --content-base build/ --history-api-fallback --hot --inline",
+    "start_mac": "export BUILD_PATH=build && export IS_DEV=true && webpack-dev-server --host 0.0.0.0 --color --content-base build/ --history-api-fallback --hot --inline",
+
+    "build": "rm -rf build&&set STAND_ALONE=true&set API_DOMAIN=http://192.168.1.13:8864&set BUILD_PATH=build&set IS_DEV=false&&node beforeBuild.js&&webpack --progress --color",
+    "build_mac": "rm -rf build && export STAND_ALONE=true && export API_DOMAIN=http://192.168.1.13:8864 && export BUILD_PATH=build && export IS_DEV=false && node beforeBuild.js && webpack --progress --color"
+
+  },
+  "license": "MIT",
+  "dependencies": {
+    "JSON": "^1.0.0",
+    "angular": "^1.5.6",
+    "angular-animate": "^1.5.9",
+    "angular-ui-bootstrap": "^2.3.0",
+    "angular-ui-router": "^0.3.2",
+    "ng-file-upload": "^12.2.13",
+    "splash-screen": "^3.0.0",
+    "toastr": "^2.1.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.3.7",
+    "babel-core": "^6.10.4",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "css-loader": "^0.23.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "html-loader": "^0.4.3",
+    "html-webpack-plugin": "^2.22.0",
+    "jquery": "^3.1.1",
+    "jquery.cookie": "^1.4.1",
+    "js-cookie": "^2.1.3",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
+    "ng-annotate-loader": "^0.1.0",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1",
+    "webpack-md5-hash": "^0.0.5"
+  }
+}

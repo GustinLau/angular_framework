@@ -1,0 +1,25 @@
+<div class="container" style="padding-top: 100px">
+    <div class="text-danger wrapper text-center">
+        <img class="img-thumbnail" src="./logo.jpg" style="width: 150px"/>
+    </div>
+    <div>
+        <form name="form" >
+            <div class="text-danger  text-center">
+                {{$this.authError}}
+            </div>
+            <div class="list-group">
+                <div class="list-group-item">
+                    <input type="text" placeholder="Username" class="form-control no-border"
+                           ng-model="$this.user.username" required>
+                </div>
+                <div class="list-group-item">
+                    <input type="password" placeholder="Password" class="form-control no-border"
+                           ng-model="$this.user.password" required>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-lg btn-primary btn-block" ng-click="$this.loginSubmit()"
+                    ng-disabled='form.$invalid || $this.disableBtn'>登　录
+            </button>
+        </form>
+    </div>
+</div>

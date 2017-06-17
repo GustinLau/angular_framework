@@ -1,0 +1,28 @@
+<div class="text-center">
+    <xs-hello/>
+</div>
+<ul>
+    <li ui-sref-active="active">
+        <a ui-sref="admin">
+            <span>Index</span>
+        </a>
+    </li>
+    <li ui-sref-active="active" xs-permission="permission_1">
+        <a ui-sref="admin.example.1">
+            <span>Example_1</span>
+        </a>
+    </li>
+    <li ui-sref-active="active" xs-permission="permission_2">
+        <a ui-sref="admin.example.2">
+            <span>Example_2(被拦截)</span>
+        </a>
+    </li>
+    <li ui-sref-active="active" xs-permission="permission_5">
+        <a ui-sref="admin.example.1">
+            <span>看不见我</span>
+        </a>
+    </li>
+</ul>
+
+<p>以下是子页面</p>
+<div class="fade-in-up" ui-view></div>
