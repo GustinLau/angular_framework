@@ -458,6 +458,8 @@ this.configs={
 4. 关于编译后的资源位置：如果是`.min.js`结尾的文件编译后会放到`/assets/js/*.min.js`,如果是`.min.css`结尾的文件编译后会放到`/assets/css/*.min.css`,图片文件如果小于5k会转成Base64，大于5k会放到`/assets/img/*.*`,字体文件会放到`/assets/res/*.*`,这部分可通过修改`webpack.config.js`进行修改。
 5. 如果有压缩了的文件加入，最后需要在`webpack.config.js`中的`HtmlWebpackPlugin`手动进行加入！！！
 6. 项目对Jquery有依赖，添加方式为在`webpack.config.js`中的`HtmlWebpackPlugin`手动进行加入！！！
+7. 路由配置需要一个默认路由，默认路由有且只有一个，你可以看源码的login的路由配置，此处不作叙述
+8. 界面丑是因为我懒啦
 
 # 编译
 如果你是**Windows**用户你可以执行
