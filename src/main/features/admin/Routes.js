@@ -2,7 +2,7 @@
  *
  *  Routes module expose route information used in admin feature
  *
- *  @author  LeShang
+ *  @author  Gustin Lau
  *  @date    Nov 24, 2016
  *
  */

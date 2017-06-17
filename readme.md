@@ -113,7 +113,9 @@ angular-framework
 ```
 ### 路由配置
 核心路由配置是写在框架里面，但`/src/main/config/RouterConfig.js`才是真正引用，配置所有路由直接调用父级`_routeConfig(..)`方法即可，若需要实现某些自定义配置，则可重写`_routeConfig(..)`方法实现。
+
 如当入户未登陆时只配置/login页面，其他页面不配置
+
 ```javascript
 if (LoginChecker.check(this.app)) {
     //config each router
@@ -136,8 +138,11 @@ if (LoginChecker.check(this.app)) {
 
 ### 权限配置
 与路由一样，核心权限配置写在框架里面，但需要在`/src/main/Service/PermissionService.js`里面实现`static init()`,`requestPermissions(..)`这两个方法
+
 `static init()` 方法是用于初始化权限，如果不初始化权限，权限列表为空，配置了权限的菜单会因被remove掉而看不到。
+
 `requestPermissions(..)`是处理请求(更新)权限列表，若某些地方需求请求新的权限可在此处处理。
+
 要注意的是这些请求需要同步请求，否则可能出现异常情况。
 
 ## 如何编写一个一个页面（以admin为例）
@@ -167,8 +172,11 @@ if (LoginChecker.check(this.app)) {
 export default ExampleController;
  ```
  `constructor`是构造器，类构造时会调用该方法，参数是需要依赖注入的服务，注入后的服务需要传入到this才能全局使用。
+
  **注意**，因为最终需要进行webpack压缩编译，会出现变量名缩短的问题，所以在有依赖注入的构造器上一行必须添加`/** @ngInject */`，或者在下一行加上`'ngInject';`，这样编译后的代码才会正常运行。
+
 之后两个方法分别是初始化和销毁方法，可选择是否实现。
+
 最后记得**export**
 
 ### 新建一个View
@@ -178,6 +186,7 @@ export default ExampleController;
 ```
 ### 配置路由
 我们使用的路由是ui-router不是自带路由，不懂可以先学习下ui-router
+
 首先是import controller 和 template
 ```javascript
 import tpl_example from "./templates/example.html";
@@ -462,4 +471,5 @@ this.configs={
 
 # 联系方式
 如果你在使用中遇到困难或发现有BUG可通过邮箱联系我
+
 邮箱：gustinlau@gmail.com
