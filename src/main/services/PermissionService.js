@@ -18,14 +18,13 @@ class PermissionService extends XsPermissionService {
 
         //仅用于测试，请根据实际情况修改
         _permissions = ["permission_1", "permission_2"];
-        $rootScope.$broadcast('permissionsChanged');
         return _permissions;
     }
 
     _permission($rootScope) {
         //实现父级 this.permission
         this.permissions = PermissionService.init($rootScope);
-
+        $rootScope.$broadcast('permissionsChanged');
         //实现父级 this.requestPermissions
         this.requestPermissions = () => {
             //TODO 同步请求获取权限

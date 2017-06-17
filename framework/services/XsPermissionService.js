@@ -14,11 +14,6 @@ class XsPermissionService extends Service {
 
     constructor(features, app) {
         super(features, app);
-
-
-
-
-
     }
 
     _permission($rootScope) {
